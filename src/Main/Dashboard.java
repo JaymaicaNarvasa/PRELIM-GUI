@@ -61,7 +61,6 @@ public class Dashboard extends javax.swing.JFrame {
         panel1.setBackground(new java.awt.Color(153, 153, 153));
 
         panel2.setBackground(new java.awt.Color(204, 204, 204));
-        panel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         boardpane.setBackground(new java.awt.Color(153, 153, 153));
         boardpane.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -97,8 +96,6 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panel2.add(boardpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 260, -1));
-
         adminpane.setBackground(new java.awt.Color(153, 153, 153));
         adminpane.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -133,8 +130,6 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panel2.add(adminpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 260, -1));
-
         customerpane.setBackground(new java.awt.Color(153, 153, 153));
         customerpane.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -167,7 +162,24 @@ public class Dashboard extends javax.swing.JFrame {
             .addComponent(customer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        panel2.add(customerpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 260, -1));
+        javax.swing.GroupLayout panel2Layout = new javax.swing.GroupLayout(panel2);
+        panel2.setLayout(panel2Layout);
+        panel2Layout.setHorizontalGroup(
+            panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(boardpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(adminpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(customerpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        panel2Layout.setVerticalGroup(
+            panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel2Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(boardpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(adminpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(customerpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         maindesktop.setBackground(new java.awt.Color(51, 51, 51));
 
