@@ -41,13 +41,13 @@ public class settingsPage extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        ProfileName = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        address = new javax.swing.JLabel();
+        user = new javax.swing.JLabel();
+        position = new javax.swing.JLabel();
+        email = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         userPane = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -68,10 +68,10 @@ public class settingsPage extends javax.swing.JInternalFrame {
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("User Name Here");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 160, 20));
+        ProfileName.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        ProfileName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ProfileName.setText("User Name Here");
+        jPanel3.add(ProfileName, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 160, 20));
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-unisexprofile-100.png"))); // NOI18N
@@ -86,25 +86,25 @@ public class settingsPage extends javax.swing.JInternalFrame {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(460, 0, 250, 40);
 
-        jLabel5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel5.setText("ADDRESS: (UserAddressLocation)");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(210, 130, 310, 20);
+        address.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        address.setText("ADDRESS: (UserAddressLocation)");
+        jPanel1.add(address);
+        address.setBounds(210, 130, 310, 20);
 
-        jLabel6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel6.setText("ACCOUNT NAME: (UserName)");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(210, 40, 310, 20);
+        user.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        user.setText("ACCOUNT NAME: (UserName)");
+        jPanel1.add(user);
+        user.setBounds(210, 40, 310, 20);
 
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel7.setText("POSITION: (Administrator)");
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(210, 70, 310, 20);
+        position.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        position.setText("POSITION: (Administrator)");
+        jPanel1.add(position);
+        position.setBounds(210, 70, 310, 20);
 
-        jLabel8.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel8.setText("EMAIL: (Email@gmail.com)");
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(210, 100, 310, 20);
+        email.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        email.setText("EMAIL: (Email@gmail.com)");
+        jPanel1.add(email);
+        email.setBounds(210, 100, 310, 20);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 160));
 
@@ -287,24 +287,24 @@ public class settingsPage extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ProfileName;
     private javax.swing.JPanel Settings;
+    private javax.swing.JLabel address;
+    private javax.swing.JLabel email;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel position;
     private javax.swing.JPanel reportPane;
+    private javax.swing.JLabel user;
     private javax.swing.JPanel userPane;
     // End of variables declaration//GEN-END:variables
 }

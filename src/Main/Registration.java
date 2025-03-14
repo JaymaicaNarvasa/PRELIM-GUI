@@ -106,16 +106,12 @@ public class Registration extends javax.swing.JFrame {
         setUndecorated(true);
 
         jPanel3.setBackground(new java.awt.Color(255, 204, 204));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        status.setBackground(new java.awt.Color(102, 102, 102));
         status.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        status.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Officer", "Manager", "Admin" }));
-        jPanel3.add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 330, 120, 30));
+        status.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Customer" }));
 
         jLabel10.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jLabel10.setText("Sign Up to Loan ");
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, -1, -1));
 
         fname.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         fname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -124,15 +120,12 @@ public class Registration extends javax.swing.JFrame {
                 fnameActionPerformed(evt);
             }
         });
-        jPanel3.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 230, 30));
 
         lblpass.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         lblpass.setText("Password");
-        jPanel3.add(lblpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, -1, -1));
 
         lblFname.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         lblFname.setText("First Name");
-        jPanel3.add(lblFname, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, -1, -1));
 
         pass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         pass.addActionListener(new java.awt.event.ActionListener() {
@@ -140,7 +133,6 @@ public class Registration extends javax.swing.JFrame {
                 passActionPerformed(evt);
             }
         });
-        jPanel3.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, 230, 30));
 
         registerpane.setBackground(new java.awt.Color(255, 204, 204));
         registerpane.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -184,16 +176,12 @@ public class Registration extends javax.swing.JFrame {
             .addComponent(Loglbl1, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
         );
 
-        jPanel3.add(registerpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, 320, 40));
-
         Already.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         Already.setText("Already have an account?");
-        jPanel3.add(Already, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 460, 170, 20));
 
         lbl___.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbl___.setForeground(new java.awt.Color(0, 0, 102));
         lbl___.setText("_____");
-        jPanel3.add(lbl___, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 460, 50, 20));
 
         lblsignin.setBackground(new java.awt.Color(255, 204, 204));
         lblsignin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -205,7 +193,6 @@ public class Registration extends javax.swing.JFrame {
                 lblsigninMouseClicked(evt);
             }
         });
-        jPanel3.add(lblsignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 460, 70, 20));
 
         contact.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         contact.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -214,15 +201,12 @@ public class Registration extends javax.swing.JFrame {
                 contactActionPerformed(evt);
             }
         });
-        jPanel3.add(contact, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 230, 30));
 
         lblcontact.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         lblcontact.setText("Role");
-        jPanel3.add(lblcontact, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 300, -1, -1));
 
         lbladdress.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         lbladdress.setText("Address");
-        jPanel3.add(lbladdress, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, -1, -1));
 
         Email.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         Email.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -231,19 +215,15 @@ public class Registration extends javax.swing.JFrame {
                 EmailActionPerformed(evt);
             }
         });
-        jPanel3.add(Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 230, 30));
 
         lblLname.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         lblLname.setText("Last Name");
-        jPanel3.add(lblLname, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel12.setText("___________");
-        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, 130, -1));
 
         lblUsernmae.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         lblUsernmae.setText("Username");
-        jPanel3.add(lblUsernmae, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, -1, -1));
 
         user.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         user.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -252,48 +232,80 @@ public class Registration extends javax.swing.JFrame {
                 userActionPerformed(evt);
             }
         });
-        jPanel3.add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 230, 30));
 
         lblemail.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         lblemail.setText("Email");
-        jPanel3.add(lblemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel14.setText("___________");
-        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 130, -1));
 
         jPanel5.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 2, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("support—financing ");
         jLabel4.setToolTipText("");
-        jPanel5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel11.setText("____________________");
-        jPanel5.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 2, 18)); // NOI18N
         jLabel3.setText("your future today.");
         jLabel3.setToolTipText("");
-        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 2, 18)); // NOI18N
         jLabel1.setText("Your dreams, our");
         jLabel1.setToolTipText("");
-        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 180, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         jLabel2.setText("CrediSure");
-        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/—Pngtree—coin in hand loan logo_8137202.png"))); // NOI18N
-        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, -1, -1));
 
-        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 490));
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel2))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jLabel5))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel4))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel3))))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addComponent(jLabel2)
+                .addGap(5, 5, 5)
+                .addComponent(jLabel5)
+                .addGap(20, 20, 20)
+                .addComponent(jLabel1)
+                .addGap(4, 4, 4)
+                .addComponent(jLabel4)
+                .addGap(4, 4, 4)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel11))
+                    .addComponent(jLabel3))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         lname.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -302,17 +314,136 @@ public class Registration extends javax.swing.JFrame {
                 lnameActionPerformed(evt);
             }
         });
-        jPanel3.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 230, 30));
 
         address.setColumns(20);
         address.setRows(5);
         jScrollPane1.setViewportView(address);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 306, 270, 90));
-
         lblcontact1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         lblcontact1.setText("Contact Number");
-        jPanel3.add(lblcontact1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 230, -1, -1));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(280, 280, 280)
+                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(lblUsernmae)
+                        .addGap(172, 172, 172)
+                        .addComponent(lblpass))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50)
+                        .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(lblFname)
+                        .addGap(162, 162, 162)
+                        .addComponent(lblemail))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50)
+                        .addComponent(Email, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(lblLname)
+                        .addGap(165, 165, 165)
+                        .addComponent(lblcontact1))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50)
+                        .addComponent(contact, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(lbladdress)
+                        .addGap(13, 13, 13)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblcontact)
+                            .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(110, 110, 110)
+                        .addComponent(registerpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Already, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(170, 170, 170)
+                                .addComponent(lbl___))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(160, 160, 160)
+                                .addComponent(lblsignin, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel12))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblUsernmae)
+                    .addComponent(lblpass))
+                .addGap(4, 4, 4)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblFname)
+                    .addComponent(lblemail))
+                .addGap(4, 4, 4)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Email, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblLname)
+                    .addComponent(lblcontact1))
+                .addGap(4, 4, 4)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(contact, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(lbladdress))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(lblcontact)
+                        .addGap(4, 4, 4)
+                        .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(14, 14, 14)
+                .addComponent(registerpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Already, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl___, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblsignin, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -342,8 +473,8 @@ public class Registration extends javax.swing.JFrame {
         
     if(check == 1){
         dbConnector dbc = new dbConnector();
-        int result = dbc.insertData("INSERT INTO tbl_user(u_fname, u_lname, u_username, u_password, u_address, u_email, u_contact, u_status)"
-              + "VALUES ('"+fname.getText()+"', '"+lname.getText()+"', '"+user.getText()+"', '"+pass.getText()+"', '"+address.getText()+"', '"+Email.getText()+"', '"+contact.getText()+"', 'Pending')");
+        int result = dbc.insertData("INSERT INTO tbl_user(u_fname, u_lname, u_username, u_password, u_address, u_email, u_contact, u_status, u_type)"
+              + "VALUES ('"+fname.getText()+"', '"+lname.getText()+"', '"+user.getText()+"', '"+pass.getText()+"', '"+address.getText()+"', '"+Email.getText()+"', '"+contact.getText()+"', 'Pending', 'Customer')");
       
         if(result == 1){
          JOptionPane.showMessageDialog(null, "REGISTERED SUCCESSFULY!");
@@ -461,7 +592,7 @@ public class Registration extends javax.swing.JFrame {
     private javax.swing.JTextField lname;
     private javax.swing.JPasswordField pass;
     private javax.swing.JPanel registerpane;
-    private javax.swing.JComboBox<String> status;
+    public javax.swing.JComboBox<String> status;
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
 }

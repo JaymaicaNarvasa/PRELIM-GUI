@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Main;
 
 import intermalpage.*;
@@ -11,17 +6,13 @@ import Main.*;
 import config.dbConnector;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Admin
- */
-public class CustomerForm extends javax.swing.JFrame {
+public class AdminForm extends javax.swing.JFrame {
 
     public String gender;
     public String action;
     
     
-    public CustomerForm() {
+    public AdminForm() {
         initComponents();
     }
     
@@ -29,7 +20,7 @@ public class CustomerForm extends javax.swing.JFrame {
         this.setVisible(false); 
         Dashboard dash = new Dashboard();
         dash.setVisible(true);
-        customerPage cp = new customerPage();
+        userPage cp = new userPage();
         dash.maindesktop.add(cp).setVisible(true);
     }
             Color navcolor = new Color (153,153,153);
@@ -51,35 +42,37 @@ public class CustomerForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         labelpane = new javax.swing.JPanel();
         label = new javax.swing.JLabel();
         backpane = new javax.swing.JPanel();
         back = new javax.swing.JLabel();
-        cId = new javax.swing.JTextField();
+        uId = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         fname = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         lname = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        female = new javax.swing.JRadioButton();
-        male = new javax.swing.JRadioButton();
         jLabel6 = new javax.swing.JLabel();
-        status = new javax.swing.JComboBox<>();
-        jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         address = new javax.swing.JTextArea();
         contact = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         email = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        role = new javax.swing.JComboBox<>();
+        jLabel5 = new javax.swing.JLabel();
+        status = new javax.swing.JComboBox<>();
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(255, 255, 255)), "CUSTOMER FORM", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Arial Black", 0, 24), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(255, 255, 255)), "ADMIN FORM", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Arial Black", 0, 24), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jPanel1MouseMoved(evt);
@@ -137,23 +130,33 @@ public class CustomerForm extends javax.swing.JFrame {
         back.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         back.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         back.setText("<");
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout backpaneLayout = new javax.swing.GroupLayout(backpane);
         backpane.setLayout(backpaneLayout);
         backpaneLayout.setHorizontalGroup(
             backpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(backpaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         backpaneLayout.setVerticalGroup(
             backpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(backpaneLayout.createSequentialGroup()
+                .addComponent(back)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        cId.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        cId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cId.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        cId.setEnabled(false);
-        cId.setOpaque(false);
+        uId.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        uId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        uId.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        uId.setEnabled(false);
+        uId.setOpaque(false);
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel1.setText("Customer ID");
@@ -174,41 +177,8 @@ public class CustomerForm extends javax.swing.JFrame {
         lname.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         lname.setOpaque(false);
 
-        jLabel5.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jLabel5.setText("Status");
-
-        female.setBackground(new java.awt.Color(153, 153, 153));
-        female.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        female.setText("FEMALE");
-        female.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                femaleActionPerformed(evt);
-            }
-        });
-
-        male.setBackground(new java.awt.Color(153, 153, 153));
-        male.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        male.setText("MALE");
-        male.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                maleMouseClicked(evt);
-            }
-        });
-        male.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                maleActionPerformed(evt);
-            }
-        });
-
         jLabel6.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel6.setText("Address");
-
-        status.setBackground(new java.awt.Color(153, 153, 153));
-        status.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        status.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Single", "Married", "Widowed" }));
-
-        jLabel7.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jLabel7.setText("Gender");
 
         address.setColumns(20);
         address.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -231,6 +201,20 @@ public class CustomerForm extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel9.setText("Email");
 
+        jLabel4.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        jLabel4.setText("Role");
+
+        role.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        role.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Customer" }));
+
+        jLabel5.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        jLabel5.setText("Status");
+
+        status.setBackground(java.awt.SystemColor.activeCaptionBorder);
+        status.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        status.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Active", "Pending" }));
+        status.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -238,43 +222,44 @@ public class CustomerForm extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(13, 13, 13)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addGap(16, 16, 16)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cId, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(jLabel8)
-                .addGap(37, 37, 37)
-                .addComponent(contact, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(male, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addComponent(female, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(jLabel9)
-                .addGap(67, 67, 67)
-                .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(backpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(530, 530, 530)
-                .addComponent(labelpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addGap(16, 16, 16)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(uId, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(76, 76, 76)
+                        .addComponent(role, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)
+                        .addComponent(jLabel9)
+                        .addGap(67, 67, 67)
+                        .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(backpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(61, 61, 61)
+                                .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(48, 48, 48)
+                                .addComponent(jLabel8)
+                                .addGap(37, 37, 37)
+                                .addComponent(contact, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(labelpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20))))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -288,32 +273,35 @@ public class CustomerForm extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(cId, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(uId, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(20, 20, 20)
                         .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(20, 20, 20)
                         .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
+                        .addGap(70, 70, 70)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(contact, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(male, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(female, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                    .addComponent(contact, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(role, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(backpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(labelpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -334,11 +322,12 @@ public class CustomerForm extends javax.swing.JFrame {
     private void labelpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelpaneMouseClicked
          dbConnector dbc = new dbConnector();
         if(action.equals("ADD")){
-            
             int check = validateTegister();
+            
         if(check == 1){
-          int result = dbc.insertData("INSERT INTO tbl_customer(c_fname, c_lname, c_gender, c_address, c_contact, c_email, c_status) "
-           + "VALUES ('"+fname.getText()+"' , '"+lname.getText()+"' , '"+gender+"' , '"+address.getText()+"' , '"+contact.getText()+"' , '"+email.getText()+"' , '"+status.getSelectedItem()+"')");
+          int result = dbc.insertData("INSERT INTO tbl_user(u_fname, u_lname , u_status , u_address, u_contact, u_email, u_type) "
+           + "VALUES ('"+fname.getText()+"' , '"+lname.getText()+"' , '"+status.getSelectedItem()+"' , "
+                   + "'"+address.getText()+"' , '"+contact.getText()+"' , '"+email.getText()+"' , '"+role.getSelectedItem()+"')");
            
           if(result == 1){
               JOptionPane.showMessageDialog(null, "SUCCESSFULLY SAVE");
@@ -352,9 +341,9 @@ public class CustomerForm extends javax.swing.JFrame {
         
         
        }else if(action.equals("UPDATE")){
-           dbc.updateData("UPDATE tbl_customer SET c_fname = '"+fname.getText()+"', c_lname = '"+lname.getText()+"', c_gender = '"+gender+"', "
-                   + "c_address = '"+address.getText()+"', c_contact = '"+contact.getText()+"', c_email = '"+email.getText()+"', c_status = '"+status.getSelectedItem()+"' "
-                   + "WHERE c_id = '"+cId.getText()+"'");
+           dbc.updateData("UPDATE tbl_user SET u_fname = '"+fname.getText()+"', u_lname = '"+lname.getText()+"' ,"
+                   + "u_address = '"+address.getText()+"' , u_contact = '"+contact.getText()+"' , u_email = '"+email.getText()+"' ,"
+                   + "u_status = '"+status.getSelectedItem()+"' , u_type = '"+role.getSelectedItem()+"' WHERE u_id = '"+uId.getText()+"' ");
            close();
        }else {
            JOptionPane.showMessageDialog(null, "NO Action SELECTED!");
@@ -374,17 +363,6 @@ public class CustomerForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1MouseMoved
 
-    private void maleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maleActionPerformed
-        female.setSelected(false);
-        if(male.isSelected())
-        {
-            gender = "Male";
-        }else
-        {
-            gender = null;
-        }
-    }//GEN-LAST:event_maleActionPerformed
-
     private void backpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backpaneMouseClicked
         close();
     }//GEN-LAST:event_backpaneMouseClicked
@@ -397,20 +375,9 @@ public class CustomerForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_backpaneMouseExited
 
-    private void femaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_femaleActionPerformed
-      male.setSelected(false);
-        if(female.isSelected())
-        {
-            gender = "Female";
-        }else
-        {
-            gender = null;
-        }
-    }//GEN-LAST:event_femaleActionPerformed
-
-    private void maleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_maleMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_maleMouseClicked
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+       close();
+    }//GEN-LAST:event_backMouseClicked
 
     /**
      * @param args the command line arguments
@@ -429,20 +396,23 @@ public class CustomerForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CustomerForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CustomerForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CustomerForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CustomerForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CustomerForm().setVisible(true);
+                new AdminForm().setVisible(true);
             }
         });
     }
@@ -451,17 +421,16 @@ public class CustomerForm extends javax.swing.JFrame {
     public javax.swing.JTextArea address;
     private javax.swing.JLabel back;
     private javax.swing.JPanel backpane;
-    public javax.swing.JTextField cId;
     public javax.swing.JTextField contact;
     public javax.swing.JTextField email;
-    public javax.swing.JRadioButton female;
     public javax.swing.JTextField fname;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -469,7 +438,8 @@ public class CustomerForm extends javax.swing.JFrame {
     public javax.swing.JLabel label;
     private javax.swing.JPanel labelpane;
     public javax.swing.JTextField lname;
-    public javax.swing.JRadioButton male;
+    public javax.swing.JComboBox<String> role;
     public javax.swing.JComboBox<String> status;
+    public javax.swing.JTextField uId;
     // End of variables declaration//GEN-END:variables
 }

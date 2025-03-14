@@ -37,7 +37,7 @@ public class userPage extends javax.swing.JInternalFrame {
     public void displayData(){
         try{
             dbConnector dbc = new dbConnector();
-            ResultSet rs = dbc.getData("SELECT * FROM tbl_user");
+            ResultSet rs = dbc.getData("SELECT * FROM tbl_customer");
             user_tbl.setModel(DbUtils.resultSetToTableModel(rs));
             
         }catch(SQLException ex){
@@ -80,12 +80,10 @@ public class userPage extends javax.swing.JInternalFrame {
                 jPanel1MouseMoved(evt);
             }
         });
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("USER PAGE");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 30));
+        jLabel4.setText("CUSTOMER");
 
         addpane.setBackground(new java.awt.Color(255, 204, 204));
         addpane.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -100,15 +98,22 @@ public class userPage extends javax.swing.JInternalFrame {
                 addpaneMouseExited(evt);
             }
         });
-        addpane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         add.setBackground(new java.awt.Color(255, 255, 255));
         add.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         add.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add.setText("ADD");
-        addpane.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 30));
 
-        jPanel1.add(addpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 50, 30));
+        javax.swing.GroupLayout addpaneLayout = new javax.swing.GroupLayout(addpane);
+        addpane.setLayout(addpaneLayout);
+        addpaneLayout.setHorizontalGroup(
+            addpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        addpaneLayout.setVerticalGroup(
+            addpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         editpane.setBackground(new java.awt.Color(255, 204, 204));
         editpane.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -123,15 +128,22 @@ public class userPage extends javax.swing.JInternalFrame {
                 editpaneMouseExited(evt);
             }
         });
-        editpane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         edit.setBackground(new java.awt.Color(255, 255, 255));
         edit.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         edit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         edit.setText("EDIT");
-        editpane.add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 30));
 
-        jPanel1.add(editpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 50, 30));
+        javax.swing.GroupLayout editpaneLayout = new javax.swing.GroupLayout(editpane);
+        editpane.setLayout(editpaneLayout);
+        editpaneLayout.setHorizontalGroup(
+            editpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(edit, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        editpaneLayout.setVerticalGroup(
+            editpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(edit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         delpane.setBackground(new java.awt.Color(255, 204, 204));
         delpane.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -146,15 +158,22 @@ public class userPage extends javax.swing.JInternalFrame {
                 delpaneMouseExited(evt);
             }
         });
-        delpane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         del.setBackground(new java.awt.Color(255, 255, 255));
         del.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         del.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         del.setText("DELETE");
-        delpane.add(del, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 30));
 
-        jPanel1.add(delpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 60, 30));
+        javax.swing.GroupLayout delpaneLayout = new javax.swing.GroupLayout(delpane);
+        delpane.setLayout(delpaneLayout);
+        delpaneLayout.setHorizontalGroup(
+            delpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(del, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        delpaneLayout.setVerticalGroup(
+            delpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(del, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         searchpane.setBackground(new java.awt.Color(255, 204, 204));
         searchpane.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -169,15 +188,22 @@ public class userPage extends javax.swing.JInternalFrame {
                 searchpaneMouseExited(evt);
             }
         });
-        searchpane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         search1.setBackground(new java.awt.Color(255, 255, 255));
         search1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         search1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         search1.setText("SERACH");
-        searchpane.add(search1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 30));
 
-        jPanel1.add(searchpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 320, 60, 30));
+        javax.swing.GroupLayout searchpaneLayout = new javax.swing.GroupLayout(searchpane);
+        searchpane.setLayout(searchpaneLayout);
+        searchpaneLayout.setHorizontalGroup(
+            searchpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(search1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        searchpaneLayout.setVerticalGroup(
+            searchpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(search1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         user_tbl.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         user_tbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -190,21 +216,16 @@ public class userPage extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(user_tbl);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 670, 280));
-
         search.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         search.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         search.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         search.setOpaque(false);
-        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 170, 30));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel12.setText("__________________________");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, -20, 290, 50));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel13.setText("__________________________");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 290, 70));
 
         refreshpane.setBackground(new java.awt.Color(255, 204, 204));
         refreshpane.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -219,15 +240,73 @@ public class userPage extends javax.swing.JInternalFrame {
                 refreshpaneMouseExited(evt);
             }
         });
-        refreshpane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         refresh.setBackground(new java.awt.Color(255, 255, 255));
         refresh.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         refresh.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         refresh.setText("REFRESH");
-        refreshpane.add(refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 30));
 
-        jPanel1.add(refreshpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, 70, 30));
+        javax.swing.GroupLayout refreshpaneLayout = new javax.swing.GroupLayout(refreshpane);
+        refreshpane.setLayout(refreshpaneLayout);
+        refreshpaneLayout.setHorizontalGroup(
+            refreshpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(refresh, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        refreshpaneLayout.setVerticalGroup(
+            refreshpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(refresh, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(420, 420, 420)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(addpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(editpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(delpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(refreshpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(110, 110, 110)
+                .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(searchpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(addpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(delpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(refreshpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -237,7 +316,9 @@ public class userPage extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -276,7 +357,7 @@ public class userPage extends javax.swing.JInternalFrame {
     private void addpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addpaneMouseClicked
         JFrame mainJFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
         mainJFrame.dispose();
-        UserForm cf = new UserForm();
+        AdminForm cf = new AdminForm();
                 cf.setVisible(true);
                 cf.action = "ADD";
                 cf.label.setText("SAVE");
@@ -297,12 +378,10 @@ public class userPage extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Please Select a Field");
         }else {
             TableModel model = user_tbl.getModel();
-            UserForm cf = new UserForm();
+            AdminForm cf = new AdminForm();
             cf.uId.setText(""+model.getValueAt(rowindex, 0));
             cf.fname.setText(""+model.getValueAt(rowindex, 1));
             cf.lname.setText(""+model.getValueAt(rowindex, 2));
-            cf.username.setText(model.getValueAt(rowindex, 3).toString());
-            cf.password.setText(model.getValueAt(rowindex, 4).toString());
             cf.address.setText(model.getValueAt(rowindex, 5).toString());
             cf.email.setText(model.getValueAt(rowindex, 6).toString());
             cf.contact.setText(model.getValueAt(rowindex, 7).toString());

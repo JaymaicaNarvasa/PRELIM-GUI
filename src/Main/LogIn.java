@@ -246,8 +246,6 @@ public class LogIn extends javax.swing.JFrame {
                try {
         dbConnector dbc = new dbConnector();
         Connection conn = dbc.getConnection();
-        Dashboard dash = new Dashboard();
-        dash.setVisible(true);
         
         String sql = "SELECT u_type, u_status FROM tbl_user WHERE u_username = ? AND u_password = ?";
         PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -265,14 +263,16 @@ public class LogIn extends javax.swing.JFrame {
 
             if (userStatus.equalsIgnoreCase("Pending")) {
                 JOptionPane.showMessageDialog(this, "Your account is not yet activated!");
+                
             } else if (userStatus.equalsIgnoreCase("Active")) {
+                 Dashboard dash = new Dashboard();
+                 dash.setVisible(true);
+                 
                 if (userType.equalsIgnoreCase("Admin")) {
-                    JOptionPane.showMessageDialog(this, "Welcome Admin!");
                     adminPage ap = new adminPage();
                     dash.maindesktop.add(ap).setVisible(true);
                     
                 } else if (userType.equalsIgnoreCase("User")) {
-                    JOptionPane.showMessageDialog(this, "Welcome User!");
                     userPage ap = new userPage();
                     dash.maindesktop.add(ap).setVisible(true);
                     
@@ -323,19 +323,7 @@ public class LogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_closeMouseClicked
 
     private void Loglbl1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Loglbl1MouseClicked
-       String username = utxtfield.getText();
-       String password = ptxtfield.getText();
-    
-    if (username.isEmpty() && password.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "LOG IN FAILED!Must not be EMPTY!");
-        
-    } else if (username.equals("jema") && password.equals("2113")) { 
-        JOptionPane.showMessageDialog(this, "LOG IN SUCCESS!");
-        new Dashboard().setVisible(true);
-        this.dispose();
-    } else {
-        JOptionPane.showMessageDialog(this, "INVAlID username or password!");
-}
+      
     }//GEN-LAST:event_Loglbl1MouseClicked
 
     private void Loglbl1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Loglbl1MouseEntered
