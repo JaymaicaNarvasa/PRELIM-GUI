@@ -112,6 +112,9 @@ public class dashboardPage extends javax.swing.JInternalFrame {
 
         userPane.setBackground(new java.awt.Color(153, 153, 153));
         userPane.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                userPaneMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 userPaneMouseEntered(evt);
             }
@@ -299,6 +302,12 @@ public class dashboardPage extends javax.swing.JInternalFrame {
         Dashboard dash = new Dashboard();
         dash.maindesktop.add(set).setVisible(true);
     }//GEN-LAST:event_settingsPaneMouseClicked
+
+    private void userPaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userPaneMouseClicked
+    settingsPage set = new settingsPage();       
+    set.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_userPaneMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

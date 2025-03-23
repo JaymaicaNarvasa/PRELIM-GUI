@@ -37,9 +37,8 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel1" min="-2" pref="160" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel2" min="-2" pref="196" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -64,11 +63,18 @@
                           <EmptySpace min="250" pref="250" max="-2" attributes="0"/>
                           <Component id="jLabel4" min="-2" pref="250" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="user" min="-2" pref="310" max="-2" attributes="0"/>
-                      <Component id="position" min="-2" pref="310" max="-2" attributes="0"/>
-                      <Component id="email" min="-2" pref="310" max="-2" attributes="0"/>
-                      <Component id="address" min="-2" pref="310" max="-2" attributes="0"/>
+                      <Component id="user" alignment="0" min="-2" pref="310" max="-2" attributes="0"/>
+                      <Component id="position" alignment="0" min="-2" pref="310" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="address" alignment="0" min="-2" pref="310" max="-2" attributes="0"/>
+                              <Component id="email" alignment="0" min="-2" pref="310" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+                          <Component id="changepass" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
+                  <EmptySpace min="-2" pref="126" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -86,10 +92,13 @@
                           <Component id="user" min="-2" pref="20" max="-2" attributes="0"/>
                           <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                           <Component id="position" min="-2" pref="20" max="-2" attributes="0"/>
-                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                           <Component id="email" min="-2" pref="20" max="-2" attributes="0"/>
                           <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Component id="address" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="address" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="changepass" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -113,28 +122,35 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="id" min="-2" pref="50" max="-2" attributes="0"/>
                   <Component id="jLabel13" min="-2" pref="160" max="-2" attributes="0"/>
-                  <Component id="ProfileName" min="-2" pref="160" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                      <Component id="ProfileName1" min="-2" pref="160" max="-2" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="jLabel13" min="-2" pref="110" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Component id="ProfileName" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="id" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="jLabel13" min="-2" pref="110" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                      <Component id="ProfileName1" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="ProfileName">
+            <Component class="javax.swing.JLabel" name="id">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="14" style="0"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="User Name Here"/>
+                <Property name="text" type="java.lang.String" value="ID: "/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel13">
@@ -143,6 +159,15 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/icons8-unisexprofile-100.png"/>
                 </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="ProfileName1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="User Name Here"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -187,6 +212,20 @@
             </Property>
             <Property name="text" type="java.lang.String" value="EMAIL: (Email@gmail.com)"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="changepass">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="14" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="EDIT?"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="changepassMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

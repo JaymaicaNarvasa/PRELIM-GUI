@@ -382,7 +382,7 @@ public class LogIn extends javax.swing.JFrame {
                     adminPage ap = new adminPage();
                     dash.maindesktop.add(ap).setVisible(true);
                     
-                } else if (userType.equalsIgnoreCase("User")) {
+                } else if (userType.equalsIgnoreCase("Customer")) {
                     userPage ap = new userPage();
                     dash.maindesktop.add(ap).setVisible(true);
                     

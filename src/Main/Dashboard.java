@@ -1,7 +1,6 @@
 
 package Main;
 
-import intermalpage.settingsPage;
 import intermalpage.*;
 import java.awt.BasicStroke;
 import java.awt.Color;
