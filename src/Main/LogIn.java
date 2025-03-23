@@ -1,5 +1,6 @@
 package Main;
 
+import config.Session;
 import config.dbConnector;
 import intermalpage.*;
 import java.awt.BasicStroke;
@@ -348,7 +349,7 @@ public class LogIn extends javax.swing.JFrame {
         dbConnector dbc = new dbConnector();
         Connection conn = dbc.getConnection();
         
-        String sql = "SELECT u_type, u_status FROM tbl_user WHERE u_username = ? AND u_password = ?";
+        String sql = "SELECT * FROM tbl_user WHERE u_username = ? AND u_password = ?";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         
         pstmt.setString(1, utxtfield.getText().trim());
@@ -366,7 +367,15 @@ public class LogIn extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Your account is not yet activated!");
                 
             } else if (userStatus.equalsIgnoreCase("Active")) {
-                 Dashboard dash = new Dashboard();
+            Session ses = Session.getInstance();
+            ses.setId(rs.getInt("u_id"));
+            ses.setFname(rs.getString("u_fname"));
+            ses.setAddress(rs.getString("u_address"));
+            ses.setEmail(rs.getString("u_email"));
+            ses.setUsername(rs.getString("u_username"));
+            ses.setType(rs.getString("u_type"));
+                 
+                Dashboard dash = new Dashboard();
                  dash.setVisible(true);
                  
                 if (userType.equalsIgnoreCase("Admin")) {

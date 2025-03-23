@@ -27,7 +27,11 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jPanel2" max="32767" attributes="0"/>
+<<<<<<< HEAD
                   <Component id="jPanel1" pref="0" max="32767" attributes="0"/>
+=======
+                  <Component id="jPanel1" pref="710" max="32767" attributes="0"/>
+>>>>>>> 9ab58ef428eb4530d253b1396cda537f64639421
               </Group>
               <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
           </Group>
