@@ -25,53 +25,22 @@ public class Session {
         return instance == null;
     }
 
-    public int getId() {
-        return id;
-    }
+   public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
-    public int setId(int id) {
-        return id = id;
-    }
+    public String getFname() { return fname; }
+    public void setFname(String fname) { this.fname = fname; }
 
-    public String getFname() {
-        return fname;
-    }
+    public String getAddress() { return address; }
+    public void setAddress(String address) { this.address = address; }
 
-    public void setFname(String fname) {
-        this.fname = fname;
-    }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
 
-    public String getEmail() {
-        return email;
-    }
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-    
+    public String getType() { return type; }
+    public void setType(String type) { this.type = type; }
     
 }

@@ -37,6 +37,7 @@ public class settingsPage extends javax.swing.JInternalFrame {
 
     private void displayUserDetails() {
     Session ses = Session.getInstance();
+    AccountSettings ac = new AccountSettings();
 
     if (ses == null && ses.getId() == 0) {
         JOptionPane.showMessageDialog(null, "No account found, please log in first.");
@@ -44,12 +45,15 @@ public class settingsPage extends javax.swing.JInternalFrame {
         lp.setVisible(true);
         this.dispose();
     }else{
-    id.setText("ID:"+String.valueOf(ses.getId()));
+    id.setText("ID:"+ses.getId());
+   //id.setText("ID:"+String.valueOf(ses.getId()));
     ProfileName1.setText(ses.getFname());
     user.setText("ACCOUNT NAME:"+ses.getUsername());
     position.setText("POSITION:"+ses.getType());
     email.setText("EMAIL:"+ses.getEmail());
     address.setText("ADDRESS:"+ses.getAddress());
+    ac.action = "UPDATE";
+    ac.label2.setText("UPDATE");
     }
 }
 

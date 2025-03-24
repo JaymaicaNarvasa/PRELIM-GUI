@@ -1,9 +1,12 @@
 package Main;
 
 import config.dbConnector;
+import config.passwordHasher;
 import java.awt.Color;
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import javax.swing.JOptionPane;
+
 public class Registration extends javax.swing.JFrame {
 
     public Registration() {
@@ -470,22 +473,27 @@ public class Registration extends javax.swing.JFrame {
 
     private void registerpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerpaneMouseClicked
        int check = validateTegister();
-        
-    if(check == 1){
-        dbConnector dbc = new dbConnector();
-        int result = dbc.insertData("INSERT INTO tbl_user(u_fname, u_lname, u_username, u_password, u_address, u_email, u_contact, u_status, u_type)"
-              + "VALUES ('"+fname.getText()+"', '"+lname.getText()+"', '"+user.getText()+"', '"+pass.getText()+"', '"+address.getText()+"', '"+Email.getText()+"', '"+contact.getText()+"', 'Pending', 'Customer')");
-      
-        if(result == 1){
-         JOptionPane.showMessageDialog(null, "REGISTERED SUCCESSFULY!");
-           new LogIn().setVisible(true);
-           this.dispose();
-        }else{
-            JOptionPane.showMessageDialog(null, "Saving Data FAILED!");
-        }
-    }else{
-        JOptionPane.showMessageDialog(null, "ALL FIELDS REQUIRED!");
-    }
+    
+       if(check == 1){
+           dbConnector dbc = new dbConnector();
+           try{
+           String pass1 = passwordHasher.hashPassword(pass.getText());
+           int result = dbc.insertData("INSERT INTO tbl_user(u_fname, u_lname, u_username, u_password, u_address, u_email, u_contact, u_status, u_type)"
+                   + "VALUES ('"+fname.getText()+"', '"+lname.getText()+"', '"+user.getText()+"', '"+pass1+"', '"+address.getText()+"', '"+Email.getText()+"', '"+contact.getText()+"', 'Pending', 'Customer')");
+           if(result == 1){
+               JOptionPane.showMessageDialog(null, "REGISTERED SUCCESSFULY!");
+               new LogIn().setVisible(true);
+               this.dispose();
+           }else{
+               JOptionPane.showMessageDialog(null, "Saving Data FAILED!");
+           }
+       }catch(NoSuchAlgorithmException ex){
+               System.out.println(""+ex);
+               }
+       }else{
+           JOptionPane.showMessageDialog(null, "ALL FIELDS REQUIRED!");
+       }
+    
     }//GEN-LAST:event_registerpaneMouseClicked
 
     private void registerpaneMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerpaneMouseEntered
