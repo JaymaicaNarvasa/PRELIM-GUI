@@ -146,7 +146,7 @@ public class Dashboard extends javax.swing.JFrame {
         customer.setBackground(new java.awt.Color(255, 255, 255));
         customer.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         customer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        customer.setText("CUSTOMER PAGE");
+        customer.setText("USER PAGE");
 
         javax.swing.GroupLayout customerpaneLayout = new javax.swing.GroupLayout(customerpane);
         customerpane.setLayout(customerpaneLayout);

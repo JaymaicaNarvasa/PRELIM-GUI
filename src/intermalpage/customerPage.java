@@ -243,7 +243,7 @@ public class customerPage extends javax.swing.JInternalFrame {
         jLabel4.setText("CUSTOMER");
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel12.setText("_________________________");
+        jLabel12.setText("____________________________");
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel13.setText("__________________________");
@@ -289,12 +289,6 @@ public class customerPage extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel13)
-                        .addGap(2, 2, 2)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel12))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -311,6 +305,12 @@ public class customerPage extends javax.swing.JInternalFrame {
                         .addGap(20, 20, 20)
                         .addComponent(searchpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel13)
+                .addGap(2, 2, 2)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -339,7 +339,7 @@ public class customerPage extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 709, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -376,8 +376,10 @@ public class customerPage extends javax.swing.JInternalFrame {
             cf.cId.setText(""+model.getValueAt(rowindex, 0));
             cf.fname.setText(""+model.getValueAt(rowindex, 1));
             cf.lname.setText(""+model.getValueAt(rowindex, 2));
-            cf.contact.setText(""+model.getValueAt(rowindex, 3));
-            cf.email.setText(""+model.getValueAt(rowindex, 4));
+            cf.contact.setText(""+model.getValueAt(rowindex, 4));
+            cf.email.setText(""+model.getValueAt(rowindex, 5));
+            cf.address.setText(""+model.getValueAt(rowindex, 3));
+            cf.status.setSelectedItem(model.getValueAt(rowindex, 6));
             gender = model.getValueAt(rowindex, 7).toString();
             cf.setVisible(true);
             JFrame mainJFrame = (JFrame) SwingUtilities.getWindowAncestor(this);

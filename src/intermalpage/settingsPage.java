@@ -4,19 +4,13 @@
  * and open the template in the editor.
  */
 package intermalpage;
+
 import Main.*;
-import Main.LogIn;
 import config.Session;
 import java.awt.Color;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
-/**
- *
- * @author Admin
- */
 public class settingsPage extends javax.swing.JInternalFrame {
 
     /**
@@ -45,7 +39,7 @@ public class settingsPage extends javax.swing.JInternalFrame {
         lp.setVisible(true);
         this.dispose();
     }else{
-    id.setText("ID:"+ses.getId());
+   //id.setText("ID:"+ses.getId());
    //id.setText("ID:"+String.valueOf(ses.getId()));
     ProfileName1.setText(ses.getFname());
     user.setText("ACCOUNT NAME:"+ses.getUsername());
@@ -63,7 +57,6 @@ public class settingsPage extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        id = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         ProfileName1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -71,7 +64,6 @@ public class settingsPage extends javax.swing.JInternalFrame {
         user = new javax.swing.JLabel();
         position = new javax.swing.JLabel();
         email = new javax.swing.JLabel();
-        changepass = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         userPane = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -90,10 +82,6 @@ public class settingsPage extends javax.swing.JInternalFrame {
         jPanel3.setBackground(new java.awt.Color(255, 102, 102));
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        id.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        id.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        id.setText("ID: ");
-
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-unisexprofile-100.png"))); // NOI18N
 
@@ -105,7 +93,6 @@ public class settingsPage extends javax.swing.JInternalFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(3, 3, 3)
@@ -114,9 +101,7 @@ public class settingsPage extends javax.swing.JInternalFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(3, 3, 3)
                 .addComponent(ProfileName1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -137,15 +122,6 @@ public class settingsPage extends javax.swing.JInternalFrame {
         email.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         email.setText("EMAIL: (Email@gmail.com)");
 
-        changepass.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        changepass.setForeground(new java.awt.Color(0, 0, 102));
-        changepass.setText("EDIT?");
-        changepass.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                changepassMouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -160,12 +136,8 @@ public class settingsPage extends javax.swing.JInternalFrame {
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(position, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(132, 132, 132)
-                        .addComponent(changepass)))
+                    .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(126, 126, 126))
         );
         jPanel1Layout.setVerticalGroup(
@@ -184,9 +156,7 @@ public class settingsPage extends javax.swing.JInternalFrame {
                         .addGap(14, 14, 14)
                         .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(changepass, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -208,6 +178,11 @@ public class settingsPage extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Edit Profile");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout userPaneLayout = new javax.swing.GroupLayout(userPane);
         userPane.setLayout(userPaneLayout);
@@ -383,20 +358,18 @@ public class settingsPage extends javax.swing.JInternalFrame {
         log.setVisible(true);
     }//GEN-LAST:event_SettingsMouseClicked
 
-    private void changepassMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_changepassMouseClicked
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         AccountSettings ac = new AccountSettings();
         ac.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_changepassMouseClicked
+    }//GEN-LAST:event_jLabel1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ProfileName1;
     private javax.swing.JPanel Settings;
     private javax.swing.JLabel address;
-    private javax.swing.JLabel changepass;
     private javax.swing.JLabel email;
-    private javax.swing.JLabel id;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
